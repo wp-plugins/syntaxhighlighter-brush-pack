@@ -27,6 +27,7 @@ Last Modified: September 21, 2011
 // register brushes
 wp_register_script( 'syntaxhighlighter-brush-coffeescript', plugins_url( 'shBrushCoffeeScript.js', __FILE__ ), array('syntaxhighlighter-core'), '2.0.0' );
 wp_register_script( 'syntaxhighlighter-brush-clojure', plugins_url( 'shBrushClojure.js', __FILE__ ), array('syntaxhighlighter-core'), '2.0.0' );
+wp_register_script( 'syntaxhighlighter-brush-vimscript', plugins_url( 'shBrushVimscript.js', __FILE__ ), array('syntaxhighlighter-core'), '2.0.0' );
 
 // add filter for aliases
 add_filter( 'syntaxhighlighter_brushes', 'syntaxhighlighter_coffeescript_brush' );
@@ -36,6 +37,7 @@ function syntaxhighlighter_coffeescript_brush($brushes) {
    $brushes['coffeescript'] = 'coffeescript';
    $brushes['clojure'] = 'clojure';
    $brushes['clj'] = 'clojure';
+   $brushes['vimscript'] = 'vimscript';
 
    return $brushes;
 }
